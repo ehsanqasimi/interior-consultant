@@ -15,19 +15,22 @@ $white: #fff;
     box-sizing: border-box;
 }
 
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
+    max-width: 100%;
+    overflow-x: hidden;
     background-color: $background-color;
     color: $white;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
     user-select: none;
-
 }
 
 .container{
     main{
         // border: 1px solid white;
-
         .lower{
             // border: 1px solid purple;
             height: fit-content;
@@ -106,6 +109,7 @@ body {
 
     header{
         // border: 1px solid yellow;
+        overflow-x: hidden;
         nav{
             display: flex;
             justify-content: space-between;
@@ -132,7 +136,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
-                transform: translateX(100%);
+                transform: translateY(-100%);
                 transition: all 0.5s ease;
                 
                 li:first-child{
@@ -151,7 +155,7 @@ body {
         nav.show{
             ul{
 
-                transform: translateX(0%);
+                transform: translateY(0%);
             }
         }
     }
@@ -179,8 +183,6 @@ footer{
     body{
         background-color: $background-color;
         .container{
-            margin-inline: 120px;
-            margin-left: 120px;
             header{
                 nav{
                     display: flex;
@@ -189,7 +191,7 @@ footer{
 
                     }
                     ul{
-                        transform: translateX(0%);
+                        transform: translateY(0%);
                         position: static;
                         display: flex;
                         flex-direction: row;
@@ -208,21 +210,20 @@ footer{
                 align-items: center;
                 margin-top: 100px;
                 gap: 10%;
+                padding-inline: 10%;
                 .upper{
                     // border: 1px solid black;
-                    width: 30%;
+                    width: 40%;
                 }
                 .lower{
                     height: 100%;
                     // border: 1px solid white;
-                    width: 60%;
+                    width: 50%;
                 }
             }
         }
     }
+    
 
-    footer{
-        padding-top: 100px;
-    }
 
 }
